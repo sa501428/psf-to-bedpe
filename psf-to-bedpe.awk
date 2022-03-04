@@ -20,7 +20,7 @@ $0~/^>/{
 	next
 }
 !scale{
-    scale=$(( 1 + 2*(NR-1)*lenPerSnp / 2100000000 ))
+    scale=( 1 + int(2*(NR-1)*lenPerSnp / 2100000000) )
 }
 # read psf set part
 {
